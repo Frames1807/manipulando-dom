@@ -1,0 +1,67 @@
+:root {
+    --font-primaria: "Edu VIC WA NT Hand", cursive;
+    --color-rosa: #fa83f0ee;
+    --color-azul: #61b6f2ec;
+    --color-claro: #e8edefe9;
+    --color-amarelo: #fdf68e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--color-claro);
+    font-family: var(--font-primaria);
+}
+
+header {
+    background-color: var(--color-azul);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+
+    padding: 1rem;
+
+    /* margin zerada em cima e na parte de baixo, e margem automática nas laterais  */
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #fdf68e4a;
+    /* Deixando o fundo transparente */
+    backdrop-filter: blur(1opx);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 2rem;
+    border: .125rem solid var(--color-claro);
+
+    height: 3rem;
+    padding: .5rem 1rem;
+}
+
+.header a {
+    color: var(--color-claro);
+}
+
+.header button {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-claro);
+    }
+
+    .header nav {
+        display: none;
+    }

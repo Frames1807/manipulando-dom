@@ -4,12 +4,13 @@
     --color-azul: #61b6f2ec;
     --color-claro: #e8edefe9;
     --color-amarelo: #fdf68e;
+    --color-amarelo-50: #fdf68e4a;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box; /* Evitar que o conteúdo sai da caixa/espaço da tela */
     text-decoration: none;
     list-style: none;
 }
@@ -35,7 +36,7 @@ header {
 }
 
 .header {
-    background-color: #fdf68e4a;
+    background-color: var(--color-amarelo-50);
     /* Deixando o fundo transparente */
     backdrop-filter: blur(1opx);
     display: flex;
@@ -47,10 +48,12 @@ header {
 
     height: 3rem;
     padding: .5rem 1rem;
+    position: relative;
+    font-size: 0.6rem;
 }
 
 .header a {
-    color: var(--color-claro);
+    color: var(#000000);
 }
 
 .header button {
@@ -60,8 +63,30 @@ header {
     border: none;
     font-size: 2rem;
     color: var(--color-claro);
-    }
+}
 
-    .header nav {
-        display: none;
-    }
+.header nav {
+    display: none;
+}
+
+/* Classe para exibir o menu - será utilizada pelo JS */
+.header nav.nav-ativa {
+     display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header nav ul li a {
+    font-size: 1.25rem;
+}
